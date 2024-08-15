@@ -335,3 +335,92 @@ for (let i = 0; i < vitalii.length; i++) {
 //   return f;
 // }
 // console.log(filter_list(l));
+// var x = 123;
+// let y = x.toString().split("");
+// console.log(y);
+// let digits = y.map(Number);
+// console.log(digits);
+
+// let x = [
+//   [3, 0],
+//   [9, 1],
+//   [4, 10],
+//   [12, 2],
+//   [6, 1],
+//   [7, 10],
+// ];
+
+// let y = [
+//   [86, 0],
+//   [9, 9],
+//   [66, 70],
+//   [36, 17],
+//   [55, 84],
+//   [25, 67],
+//   [93, 4],
+//   [56, 92],
+//   [85, 5],
+//   [35, 122],
+//   [73, 56],
+//   [97, 43],
+//   [52, 9],
+//   [3, 36],
+//   [22, 155],
+//   [58, 1],
+//   [81, 37],
+//   [84, 108],
+// ];
+
+// var number = function (busStops) {
+//   let leftPeople = 0;
+//   for (let i = 0; i < busStops.length; i++) {
+//     let difference = busStops[i][0] - busStops[i][1];
+//     leftPeople += difference;
+//   }
+//   return leftPeople;
+// };
+
+// console.log(number(y));
+// console.log(number(x));
+// console.log(number([[0, 0]]));
+
+function findAverage(array) {
+  if (array.length === 0) {
+    return 0;
+  } else {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i];
+    }
+    return sum / array.length;
+  }
+}
+
+console.log(findAverage([1]));
+console.log(typeof [1, 1, 1].length);
+
+const str = "1 9 3 4 -5";
+function highAndLow(numbers) {
+  let strArray = numbers.split(" ");
+  let numberArray = [];
+  for (let i = 0; i < strArray.length; i++) {
+    numberArray.push(Number(strArray[i]));
+  }
+  const max = Math.max(...numberArray);
+  const min = Math.min(...numberArray);
+  console.log(max, min);
+  return `${max} ${min}`;
+}
+
+console.log(highAndLow(str));
+
+var isSquare = function (n) {
+  return Math.sqrt(n) === Math.floor(Math.sqrt(n)) ? true : false;
+};
+
+console.log(isSquare(-1));
+console.log(isSquare());
+
+console.log(Math.sqrt(26));
+console.log(Math.sqrt(26) ** 2);
+console.log(isSquare(0));
