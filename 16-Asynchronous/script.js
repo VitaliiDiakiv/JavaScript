@@ -312,3 +312,12 @@ createImage('img/img-1.jpg')
   })
   .catch(err => console.error(err));
 */
+
+const whereAmI = async function (country) {
+  const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+  const data = await res.json();
+  console.log(data);
+  renderCountry(data[0]);
+};
+whereAmI('ukraine');
+console.log('ds');
